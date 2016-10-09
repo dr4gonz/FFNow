@@ -1,0 +1,22 @@
+﻿@model FFNow.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "My Teams";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if(Model == null)
+{
+    <h2>Please <a asp-action="Login" asp-controller="Account">log in</a> to view your teams.</h2>
+}
+else
+{
+<h2>My Teams</h2>
+<ul>
+    @foreach(var team in Model.Teams)
+    {
+        <li><a asp-area="" asp-controller="Teams" asp-action="Details" asp-route-id="@team.Id">@team.Name</a></li>
+
+    }
+</ul>
+
+}

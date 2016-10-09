@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGoqP65/ri0qoPLyWvI33sgAAAAACAAAAAAAQZgAAAAEAACAAAACtIotj4t0M2anuN0iPD0zmPPJiGL6Bd2T5cN4QxNGkLQAAAAAOgAAAAAIAACAAAACsxHPHdGzs/X2BP/c/ePlDKb7qpmExGbdapjFBv4fn3YAAAACpY9IjJeJxZQvS1xOUT2Rx08yHGhA75gIpHG7yb3tRVj/JXR3eoUlvG0jUBWcBexTnjk8qhDtKCs9QWX/RQhJZPVk77meKHGYtF32T+dsfxpDdOqsW3q3PIvmj/8eN216zUsw8whj0CrVi3JV9tsZ6BWg22t9tqNozhFUvz+xK/0AAAACpMtQOe3UIehp6LwL6OvAwGJVIh4gSCD4TudK4BHiXIKh8N7aEzBk2w3ljJ4ptrIvZSxNRGWByuQ4znfjCFJM4</EncryptedPassword>
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:fantasyfootballffnow.database.windows.net,1433;Initial Catalog=Fantasy-Football;Persist Security Info=False;User ID=mreyez;Password=ifydra6u%;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
