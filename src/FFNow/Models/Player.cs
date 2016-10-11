@@ -24,7 +24,7 @@ namespace FFNow.Models
         public float PassingAttempts { get; set; }
         public float PassingCompletions { get; set; }
         public float PassingYards { get; set; }
-        public float PassintCompletionPercentage { get; set; }
+        public float PassingCompletionPercentage { get; set; }
         public float PassingTouchdowns { get; set; }
         public float PassingInterceptions { get; set; }
         public float PassingRating { get; set; }

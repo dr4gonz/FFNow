@@ -249,6 +249,14 @@ C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\00000000000000_Creat
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161006214156_AddModels.cs
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161006214156_AddModels.Designer.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009191739_UpdateGameModelWithBooleans.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009191739_UpdateGameModelWithBooleans.Designer.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192038_UpdateGameModel.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192038_UpdateGameModel.Designer.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192436_AddHasStartedBoolToNflGame.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192436_AddHasStartedBoolToNflGame.Designer.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192845_AddDateToGameModel.cs
+C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192845_AddDateToGameModel.Designer.cs
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Models\ApplicationUser.cs
 C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Models\EnvironmentVariables.cs

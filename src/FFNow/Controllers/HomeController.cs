@@ -48,15 +48,50 @@ namespace FFNow.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> UpdatePlayers()
+        public IActionResult UpdatePlayers()
         {
 
             var players = Player.GetPlayers();
-            foreach (var player in players)
+            if (_context.Player.Count() != 0)
             {
-                _context.Player.Add(player);
+                foreach (var player in players)
+                {
+                    var dbPlayer = _context.Player.FirstOrDefault(p => p.Name == player.Name);
+
+                    dbPlayer.FantasyPoints = player.FantasyPoints;
+                    dbPlayer.Fumbles = player.Fumbles;
+                    dbPlayer.FumblesLost = player.FumblesLost;
+                    dbPlayer.PassingAttempts = player.PassingAttempts;
+                    dbPlayer.PassingCompletions = player.PassingCompletions;
+                    dbPlayer.PassingInterceptions = player.PassingInterceptions;
+                    dbPlayer.PassingRating = player.PassingRating;
+                    dbPlayer.PassingTouchdowns = player.PassingTouchdowns;
+                    dbPlayer.PassingYards = player.PassingYards;
+                    dbPlayer.PassingCompletionPercentage = player.PassingCompletionPercentage;
+                    dbPlayer.Played = player.Played;
+                    dbPlayer.ReceivingTargets = player.ReceivingTargets;
+                    dbPlayer.ReceivingTouchdowns = player.ReceivingTouchdowns;
+                    dbPlayer.ReceivingYards = player.ReceivingYards;
+                    dbPlayer.Receptions = player.Receptions;
+                    dbPlayer.RecevingYardsPerReception = player.RecevingYardsPerReception;
+                    dbPlayer.RushingAttempts = player.RushingAttempts;
+                    dbPlayer.RushingTouchdowns = player.RushingTouchdowns;
+                    dbPlayer.RushingYards = player.RushingYards;
+                    dbPlayer.RushingYardsPerAttempt = player.RushingYardsPerAttempt;
+                    dbPlayer.Started = player.Started;
+
+                    _context.Entry(dbPlayer).State = EntityState.Modified;
+                    _context.SaveChanges();
+                }
             }
-            await _context.SaveChangesAsync();
+            else
+            {
+                foreach (var player in players)
+                {
+                    _context.Player.Add(player);
+                    _context.SaveChanges();
+                }
+            }
             return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> UpdateGames()
