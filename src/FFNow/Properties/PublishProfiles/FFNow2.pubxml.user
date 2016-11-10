@@ -11,12 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=tcp:fantasyfootballffnow.database.windows.net,1433;Initial Catalog=Fantasy-Football;Persist Security Info=False;User ID=mreyez;Password=ifydra6u%;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+      <Value>Server=tcp:fantasyfootballffnow.database.windows.net,1433;Initial Catalog=FantasyFootballNow;Persist Security Info=False;User ID=mreyez;Password=ifydra6u%;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
     </DestinationConnectionStrings>
-  </ItemGroup>
-  <ItemGroup>
-    <EfMigrations Include="FFNow.Data.ApplicationDbContext">
-      <Value>Server=tcp:fantasyfootballffnow.database.windows.net,1433;Initial Catalog=Fantasy-Football;Persist Security Info=False;User ID=mreyez;Password=ifydra6u%;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
-    </EfMigrations>
   </ItemGroup>
 </Project>

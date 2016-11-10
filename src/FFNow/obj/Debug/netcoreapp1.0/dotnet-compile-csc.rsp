@@ -255,6 +255,8 @@
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161009192845_AddDateToGameModel.Designer.cs"
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161011034724_FixTypoInPassingCompletionPercentage.cs"
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161011034724_FixTypoInPassingCompletionPercentage.Designer.cs"
+"C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161011042943_updatemigrations.cs"
+"C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\20161011042943_updatemigrations.Designer.cs"
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Models\ApplicationUser.cs"
 "C:\Users\Matt Reyes\Desktop\FFNow\src\FFNow\Models\EnvironmentVariables.cs"

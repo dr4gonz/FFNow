@@ -22,7 +22,7 @@ namespace FFNow.Controllers
         }
         public IActionResult Index()
         {
-            var games = NflGame.GetGames("5");
+            var games = NflGame.GetGames("9");
             //List<NflGame> gameList = new List<NflGame>();
             //foreach (var game in games)
             //{
@@ -57,31 +57,35 @@ namespace FFNow.Controllers
                 foreach (var player in players)
                 {
                     var dbPlayer = _context.Player.FirstOrDefault(p => p.Name == player.Name);
+                    if(dbPlayer != null)
+                    {
 
-                    dbPlayer.FantasyPoints = player.FantasyPoints;
-                    dbPlayer.Fumbles = player.Fumbles;
-                    dbPlayer.FumblesLost = player.FumblesLost;
-                    dbPlayer.PassingAttempts = player.PassingAttempts;
-                    dbPlayer.PassingCompletions = player.PassingCompletions;
-                    dbPlayer.PassingInterceptions = player.PassingInterceptions;
-                    dbPlayer.PassingRating = player.PassingRating;
-                    dbPlayer.PassingTouchdowns = player.PassingTouchdowns;
-                    dbPlayer.PassingYards = player.PassingYards;
-                    dbPlayer.PassingCompletionPercentage = player.PassingCompletionPercentage;
-                    dbPlayer.Played = player.Played;
-                    dbPlayer.ReceivingTargets = player.ReceivingTargets;
-                    dbPlayer.ReceivingTouchdowns = player.ReceivingTouchdowns;
-                    dbPlayer.ReceivingYards = player.ReceivingYards;
-                    dbPlayer.Receptions = player.Receptions;
-                    dbPlayer.RecevingYardsPerReception = player.RecevingYardsPerReception;
-                    dbPlayer.RushingAttempts = player.RushingAttempts;
-                    dbPlayer.RushingTouchdowns = player.RushingTouchdowns;
-                    dbPlayer.RushingYards = player.RushingYards;
-                    dbPlayer.RushingYardsPerAttempt = player.RushingYardsPerAttempt;
-                    dbPlayer.Started = player.Started;
+                    
+                        dbPlayer.FantasyPoints = player.FantasyPoints;
+                        dbPlayer.Fumbles = player.Fumbles;
+                        dbPlayer.FumblesLost = player.FumblesLost;
+                        dbPlayer.PassingAttempts = player.PassingAttempts;
+                        dbPlayer.PassingCompletions = player.PassingCompletions;
+                        dbPlayer.PassingInterceptions = player.PassingInterceptions;
+                        dbPlayer.PassingRating = player.PassingRating;
+                        dbPlayer.PassingTouchdowns = player.PassingTouchdowns;
+                        dbPlayer.PassingYards = player.PassingYards;
+                        dbPlayer.PassingCompletionPercentage = player.PassingCompletionPercentage;
+                        dbPlayer.Played = player.Played;
+                        dbPlayer.ReceivingTargets = player.ReceivingTargets;
+                        dbPlayer.ReceivingTouchdowns = player.ReceivingTouchdowns;
+                        dbPlayer.ReceivingYards = player.ReceivingYards;
+                        dbPlayer.Receptions = player.Receptions;
+                        dbPlayer.RecevingYardsPerReception = player.RecevingYardsPerReception;
+                        dbPlayer.RushingAttempts = player.RushingAttempts;
+                        dbPlayer.RushingTouchdowns = player.RushingTouchdowns;
+                        dbPlayer.RushingYards = player.RushingYards;
+                        dbPlayer.RushingYardsPerAttempt = player.RushingYardsPerAttempt;
+                        dbPlayer.Started = player.Started;
 
-                    _context.Entry(dbPlayer).State = EntityState.Modified;
-                    _context.SaveChanges();
+                        _context.Entry(dbPlayer).State = EntityState.Modified;
+                        _context.SaveChanges();
+                    }
                 }
             }
             else
