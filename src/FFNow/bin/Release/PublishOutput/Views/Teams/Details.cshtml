@@ -1,0 +1,54 @@
+@model FFNow.Models.Team
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h3>@Html.DisplayFor(model => model.Name)</h3>
+    <h5>@Html.DisplayFor(model=> model.User.UserName)</h5>
+</div>
+<div>
+    <h4>Players</h4>
+    <hr />
+    <table class="table table-bordered" id="playerTable">
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Fantasy Points</th>
+        </tr>
+        @foreach(var player in Model.PlayersTeams)
+        {
+        <tr>
+            <td><a asp-action="Details" asp-controller="Players" asp-route-id="@player.Player.Id" asp-route-currentTeamId=@ViewData["CurrentTeamId"]>@player.Player.Name</a></td>
+            <td>@player.Player.Position</td>
+            <td>@player.Player.FantasyPoints</td>
+        </tr>
+        }
+    </table>
+    <p>Fantasy Points: @Model.Score</p>
+</div>
+
+<div>
+    <form asp-action="Assign" id="assignPlayer">
+        <input type="hidden" value="@Model.Id" id="teamId" />
+        <div class="form-group">
+            <label asp-for="Players" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Players" class="form-control" asp-items="ViewBag.Players"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Assign" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="MyTeams" asp-controller="UserNavigation">Back to List</a>
+</div>
+<script src="~/js/Team.js"></script>

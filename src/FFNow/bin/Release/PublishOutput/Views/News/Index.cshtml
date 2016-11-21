@@ -1,0 +1,32 @@
+﻿@model IList<FFNow.Models.NflNews>
+@{
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>News</h2>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-lg-6 news-block">
+            <div class="row news-row">
+                <div class="col-sm-2">
+                    @if (item.Team.Length > 0)
+                    {
+                        <img class="img-responsive news-image" src="~/images/nflimages/@(item.Team).gif" alt="@(item.Team) Logo" />
+                    }
+                    else
+                    {
+                        <img class="img-responsive news-image" src="~/images/nflimages/nfl.gif" alt="nfl logo" />
+                    }
+                </div>
+                <div class="col-sm-9">
+                    <h4><a href=@item.Link>@item.Title</a></h4>
+                </div>
+            </div>
+            <div class="row news-row">@item.Description</div>
+            <div class="row news-row">@item.Date</div>
+        </div>
+    </div>
+
+}

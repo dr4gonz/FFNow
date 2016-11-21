@@ -1,0 +1,52 @@
+﻿@model FFNow.Models.NflGame
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    @if(!Model.HasStarted)
+                    {
+                        <th>
+                            @Model.Date.ToString("M/d h:mm tt")
+                        </th>
+                    }
+                    else
+                    {
+                        @if(Model.IsOver)
+                        {
+                        <th>
+                            Final
+                        </th>
+                        }
+                        else
+                        {
+                            <th>
+                                @Model.QuarterDescription - @Model.TimeRemaining
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.AwayTeam
+                    </td>
+                    <td>
+                        @Model.AwayScore
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Model.HomeTeam
+                    </td>
+                    <td>
+                        @Model.HomeScore
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

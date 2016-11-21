@@ -1,0 +1,267 @@
+﻿@model FFNow.Models.Player
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Name)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+    </dl>
+</div>
+@if (Model.Position.ToString() == "QB")
+{
+    <div>
+        <h3>Season Statistics</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Pass Attempts
+                    </th>
+                    <th>
+                        Completions
+                    </th>
+                    <th>
+                        Passing Yards
+                    </th>
+                    <th>
+                        Touchdowns
+                    </th>
+                    <th>
+                        Interceptions
+                    </th>
+                    <th>
+                        Rushing Yards
+                    </th>
+                    <th>
+                        Rushing Touchdowns
+                    </th>
+                    <th>
+                        Fumbles Lost
+                    </th>
+                    <th>
+                        Fantasy Points
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.PassingAttempts)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PassingCompletions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PassingYards)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PassingTouchdowns)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PassingInterceptions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RushingYards)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RushingTouchdowns)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FumblesLost)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FantasyPoints)
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+@if (Model.Position.ToString() == "RB")
+{
+    <div>
+        <h3>Season Statistics</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Rush Attempts
+                    </th>
+                    <th>
+                        Rushing Yards
+                    </th>
+                    <th>
+                        Yards/Attempt
+                    </th>
+                    <th>
+                        Rushing Touchdowns
+                    </th>
+                    <th>
+                        Fumbles
+                    </th>
+                    <th>
+                        Fumbles Lost
+                    </th>
+                    <th>
+                        Fantasy Points
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.RushingAttempts)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RushingYards)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RushingYardsPerAttempt)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RushingTouchdowns)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fumbles)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FumblesLost)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FantasyPoints)
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+@if (Model.Position.ToString() == "WR")
+{
+    <div>
+        <h3>Season Statistics</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Targets
+                    </th>
+                    <th>
+                        Receptions
+                    </th>
+                    <th>
+                        Yards per Reception
+                    </th>
+                    <th>
+                        Touchdowns
+                    </th>
+                    <th>
+                        Fumbles
+                    </th>
+                    <th>
+                        Fumbles Lost
+                    </th>
+                    <th>
+                        Fantasy Points
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ReceivingTargets)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Receptions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RecevingYardsPerReception)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReceivingTouchdowns)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fumbles)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FumblesLost)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FantasyPoints)
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+@if (Model.Position.ToString() == "TE")
+{
+    <div>
+        <h3>Season Statistics</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Targets
+                    </th>
+                    <th>
+                        Receptions
+                    </th>
+                    <th>
+                        Yards per Reception
+                    </th>
+                    <th>
+                        Touchdowns
+                    </th>
+                    <th>
+                        Fumbles
+                    </th>
+                    <th>
+                        Fumbles Lost
+                    </th>
+                    <th>
+                        Fantasy Points
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ReceivingTargets)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Receptions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.RecevingYardsPerReception)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReceivingTouchdowns)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Fumbles)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FumblesLost)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.FantasyPoints)
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index" asp-controller="Players">Back to List</a>
+</div>

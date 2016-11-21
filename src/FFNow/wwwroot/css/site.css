@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Wrapping element */
@@ -18,13 +19,7 @@ textarea {
     max-width: 280px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
 
-/* buttons and links extension to use brackets: [ click me ] */
 .btn-bracketed::before {
     display:inline-block;
     content: "[";
@@ -43,14 +38,11 @@ textarea {
 
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
-    width: 100%;
-}
+
 
 .news-block {
     border: 1px solid black;
+    border-radius: 5px;
     margin: 10px;
 }
 .news-image{
@@ -66,7 +58,12 @@ textarea {
 
 /*navbar*/
 .navbar-inverse {
-    background-color: #00A8E8;
+    background-color: #689F38;
+    
+}
+.navbar-brand {
+    font-size: 1.9em;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .navbar-inverse .navbar-brand {
     color:white;
@@ -81,20 +78,29 @@ textarea {
 .navigation-col {
     padding-left: 35px;
 }
+.navigation-links {
+    color: #cb5757;
+}
 /*Game Score Tables*/
 .table {
     table-layout: fixed;
     width: 100%;
 }
 .table th {
-    font-size: 0.8em;
+    font-size:1em;
     text-align:left;
     padding: 2px;
 }
 .table td {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: left;
     padding: 2px;
+}
+.main-links-list {
+    list-style: none;
+}
+.main-links {
+    font-size: 1.2em;
 }
 
 

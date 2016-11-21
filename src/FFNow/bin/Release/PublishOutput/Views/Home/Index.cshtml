@@ -1,0 +1,33 @@
+﻿@model List<FFNow.Models.NflGame>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-sm-3">
+    <h2>Scores - Week 11</h2>
+    <div class="game-scores">
+        @foreach (var game in Model)
+        {
+            @Html.Partial("~/Views/News/GameScore.cshtml", game)
+        }
+    </div>
+</div>
+
+<div class="col-sm-6">
+    <h2>News</h2>
+    @Html.Partial("~/Views/News/News.cshtml", await NflNews.GetFeeds())
+    <a asp-controller="News" asp-action="Index">More News -></a>
+</div>
+
+<div class="col-sm-3 navigation-col">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>My Profile</h2>
+            <ul>
+                <li><a asp-area="" asp-controller="UserNavigation" asp-action="MyTeams">My Teams</a></li>
+                <li><a asp-area="" asp-controller="Teams" asp-action="Create">Create Teams</a></li>
+                <li><a asp-area="" asp-controller="Players" asp-action="Index">View Players</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -22,7 +22,7 @@ namespace FFNow.Controllers
         }
         public IActionResult Index()
         {
-            var games = NflGame.GetGames("9");
+            var games = NflGame.GetGames("11");
             //List<NflGame> gameList = new List<NflGame>();
             //foreach (var game in games)
             //{

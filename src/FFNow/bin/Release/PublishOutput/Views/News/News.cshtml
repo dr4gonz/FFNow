@@ -1,0 +1,27 @@
+﻿@model IList<FFNow.Models.NflNews>
+
+@foreach (var item in Model.Take(8))
+{
+    <div class="row">
+        <div class="col-lg-12 news-block">
+            <div class="row news-row">
+                <div class="col-sm-2">
+                    @if (item.Team.Length > 0)
+                    {
+                        <img class="news-image" src="~/images/nflimages/@(item.Team).gif" alt="@(item.Team) Logo" />
+                    }
+                    else
+                    {
+                        <img class="news-image" src="~/images/nflimages/nfl.gif" alt="nfl logo" />
+                    }
+                </div>
+                <div class="col-sm-9">
+                    <h4><a href=@item.Link>@item.Title</a></h4>
+                </div>
+            </div>
+            <div class="row news-row">@item.Description</div>
+            <div class="row news-row">@item.Date</div>
+        </div>
+    </div>
+
+}
